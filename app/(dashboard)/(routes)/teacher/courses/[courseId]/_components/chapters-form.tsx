@@ -21,6 +21,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { cn } from "@/lib/utils";
 import { Chapter, Course } from "@prisma/client";
+import { ChapterList } from "./chapters-list";
 
 interface ChaptersFormProps {
   initialData: Course & { chapters: Chapter[] };
@@ -114,9 +115,14 @@ export const ChaptersForm = ({ initialData, courseId }: ChaptersFormProps) => {
         >
           {" "}
           {!initialData.chapters.length && "No chapters"}
+          <ChapterList
+            onEdit={() => {}}
+            onReorder={() => {}}
+            items={initialData.chapters || []}
+          />
         </div>
       )}
-      {/* TODO: Add a list of chapters */}
+
       {!isCreating && (
         <p className="text-xs text-muted-foreground mt-4">
           Drag and drop to reorder the chapter
