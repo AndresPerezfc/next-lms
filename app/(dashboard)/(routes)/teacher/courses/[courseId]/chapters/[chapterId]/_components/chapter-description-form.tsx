@@ -68,7 +68,7 @@ export const ChapterDescriptionForm = ({
   return (
     <div className="mt-6 border bg-slate-100 rounded-md p-4">
       <div className="font-medium flex items-center justify-between">
-        Chapter Description
+        Chapter description
         <Button onClick={toggleEdit} variant="ghost">
           {isEditing ? (
             <>Cancel</>
@@ -87,13 +87,12 @@ export const ChapterDescriptionForm = ({
             !initialData.description && "text-slate-500 italic"
           )}
         >
-          {initialData.description && "No description"}
+          {!initialData.description && "No description"}
           {initialData.description && (
             <Preview value={initialData.description} />
           )}
         </div>
       )}
-
       {isEditing && (
         <Form {...form}>
           <form
