@@ -6,10 +6,10 @@ import MuxPlayer from "@mux/mux-player-react";
 import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
-import { ImageIcon, Pencil, PlusCircle, Video } from "lucide-react";
+import { Pencil, PlusCircle, Video } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { Chapter, Course, MuxData } from "@prisma/client";
+import { Chapter, MuxData } from "@prisma/client";
 import { FileUpload } from "@/components/file-upload";
 
 interface ChapterVideoFormProps {

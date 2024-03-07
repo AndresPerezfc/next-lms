@@ -5,13 +5,11 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
-import { File, ImageIcon, Loader2, Pencil, PlusCircle, X } from "lucide-react";
+import { File, Loader2, PlusCircle, X } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Attachment, Course } from "@prisma/client";
 import { FileUpload } from "@/components/file-upload";
-
-import Image from "next/image";
 
 interface AttachmentFormProps {
   initialData: Course & { attachments: Attachment[] };
