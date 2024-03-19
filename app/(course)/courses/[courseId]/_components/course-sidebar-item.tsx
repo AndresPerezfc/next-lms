@@ -1,10 +1,11 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { CheckCircle, Lock, PlayCircle } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
-interface CourseSideBarItemProps {
+import { cn } from "@/lib/utils";
+
+interface CourseSidebarItemProps {
   label: string;
   id: string;
   isCompleted: boolean;
@@ -12,13 +13,13 @@ interface CourseSideBarItemProps {
   isLocked: boolean;
 }
 
-export const CourseSideBarItem = ({
+export const CourseSidebarItem = ({
   label,
   id,
   isCompleted,
   courseId,
   isLocked,
-}: CourseSideBarItemProps) => {
+}: CourseSidebarItemProps) => {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -55,7 +56,7 @@ export const CourseSideBarItem = ({
       <div
         className={cn(
           "ml-auto opacity-0 border-2 border-slate-700 h-full transition-all",
-          isActive && "opacity-700",
+          isActive && "opacity-100",
           isCompleted && "border-emerald-700"
         )}
       />

@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 import { db } from "@/lib/db";
 
-import { CourseSideBarItem } from "./course-sidebar-item";
+import { CourseSidebarItem } from "./course-sidebar-item";
 
 interface CourseSidebarProps {
   course: Course & {
@@ -42,7 +42,7 @@ export const CourseSidebar = async ({
       </div>
       <div className="flex flex-col w-full">
         {course.chapters.map((chapter) => (
-          <CourseSideBarItem
+          <CourseSidebarItem
             key={chapter.id}
             id={chapter.id}
             label={chapter.title}
