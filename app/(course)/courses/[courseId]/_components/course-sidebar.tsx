@@ -37,18 +37,18 @@ export const CourseSidebar = async ({
 
   return (
     <div className="h-full border-r flex flex-col overflow-y-auto shadow-sm">
-      <div>
-        <h1>{course.title}</h1>
-        {
-          purchase && (
-            <div className="mt-10">
-              <CourseProgress
-                variant="success"
-                value={progressCount}
-              />
-            </div>
-          )
-        }
+      <div className="p-8 flex flex-col border-b">
+        <h1 className="font-semibold">
+          {course.title}
+        </h1>
+        {purchase && (
+          <div className="mt-10">
+            <CourseProgress
+              variant="success"
+              value={progressCount}
+            />
+          </div>
+        )}
       </div>
       <div className="flex flex-col w-full">
         {course.chapters.map((chapter) => (
